@@ -1,0 +1,147 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Variables couleurs
+$maincolor: linear-gradient(rgba(255,121,218,1), rgba(147,86,220,1));
+$bg-prim-color: rgba(255,255,255,1);
+$bg-sec-color: rgba(246, 246, 246, 1);
+$location_banner-color: rgba(234, 234, 234, 1);
+$new_notif-color: rgba(153, 226, 208, 1);
+$footer-color: rgba(53, 53, 53, 1);
+// Variables textes
+$title-size: 1.65rem;
+$subtitle: 1.2rem;
+$subtitle-restaurant: 1.06rem;
+$btn-txt: 1rem;
+
+
+// Mixins
+@mixin flex-center-rows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-center-columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+// Global
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    a {
+        text-decoration: none;
+    }
+}
+
+.title {
+    font-size: $title-size;
+}
+
+// Head Logo
+.logo-container {
+    background: $bg-prim-color;
+    @include flex-center-rows();
+    &__img {
+        width: 197px;
+        height: 36px;
+        margin-block: 1rem;
+    }     
+}
+
+// Bandeau localisation
+.location-banner {
+    background: $location_banner-color;
+    font-size: $btn-txt - 0.1;
+    color: $footer-color;    
+    @include flex-center-rows();
+    box-shadow: 0px 11px 11px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px -5px -5px 5px rgba(0, 0, 0, 0.5);
+    &__icon {
+        font-size: 1rem;
+        color: $footer-color;
+    }
+    &__txt {
+        font-weight: 500;
+        text-align: center;
+        padding-left: 1rem;
+    }
+}
+
+// Headline
+.headline{
+    background: $bg-sec-color;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 3rem;
+    @include flex-center-columns();
+    &__title {
+        text-align: center;
+        margin-bottom: 0.3rem;
+        padding-top: 1.3rem;
+        padding-inline: 1.3rem;
+    }
+    &__subtitle {
+        font-size: $subtitle;
+        color: $footer-color;
+        font-weight: 300;
+        text-align: center;
+        margin-top: 0.5rem;
+        padding-bottom: 1rem;
+    }
+    .btn-main {
+        background: $maincolor;
+        color: white;
+        font-size: $btn-txt;
+        border: none;
+        border-radius: 25px;
+        width: 13.5rem;
+        height: 3rem;
+    }
+}
+   
+// Fonctionnement menu
+.cta-container {
+    margin-block: 3.5rem;
+    &__title {
+        padding-left: 1.5rem;
+        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    .cta-menu {
+        padding-inline: 2rem;
+        &__btn {
+            border: 2px solid black;
+            background: $bg-sec-color;
+            width: 100%;
+            height: 4.5rem;
+            border-radius: 20px;
+            margin-bottom: 1.3rem;
+            position: relative;
+            &__content {
+                @include flex-center-rows();
+            }
+            &__step-icon {
+                position: absolute; 
+                left: 0;
+            }
+            &__icon {
+                margin-inline: 1rem;
+            }
+            &__txt {
+                color: black;
+                font-size: $btn-txt;
+                font-weight: 500;
+                padding: 0.5rem;
+            }
+        }
+    }
+}
