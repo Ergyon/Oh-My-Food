@@ -64,7 +64,7 @@ body a {
   padding-inline: 1.3rem;
 }
 .headline__subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: rgb(53, 53, 53);
   font-weight: 300;
   text-align: center;
@@ -72,13 +72,14 @@ body a {
   padding-bottom: 1rem;
 }
 .headline .btn-main {
+  width: 13.5rem;
+  height: 3rem;
   background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
   color: white;
   font-size: 1rem;
   border: none;
   border-radius: 25px;
-  width: 13.5rem;
-  height: 3rem;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
 .cta-container {
@@ -93,29 +94,75 @@ body a {
   padding-inline: 2rem;
 }
 .cta-container .cta-menu__btn {
-  border: 2px solid black;
+  border: none;
   background: rgb(246, 246, 246);
-  width: 100%;
   height: 4.5rem;
   border-radius: 20px;
   margin-bottom: 1.3rem;
-  position: relative;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 .cta-container .cta-menu__btn__content {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.cta-container .cta-menu__btn__step-icon {
-  position: absolute;
-  left: 0;
+  gap: 1rem;
 }
 .cta-container .cta-menu__btn__icon {
-  margin-inline: 1rem;
+  margin-inline: 0.5rem;
 }
 .cta-container .cta-menu__btn__txt {
   color: black;
   font-size: 1rem;
   font-weight: 500;
   padding: 0.5rem;
+}
+
+.restaurants-container {
+  background: rgb(246, 246, 246);
+}
+.restaurants-container .restaurants {
+  margin-inline: 1rem;
+  padding-top: 2rem;
+}
+.restaurants-container .restaurants__title {
+  font-size: 1.65rem;
+  margin-bottom: 1rem;
+}
+.restaurants-container .cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.restaurants-container .card {
+  background: rgb(255, 255, 255);
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+.restaurants-container .card__img-wrapper {
+  max-height: 12rem;
+  overflow: hidden;
+}
+.restaurants-container .card__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.restaurants-container .card__content {
+  color: black;
+  padding-inline: 1rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+.restaurants-container .card__content__title {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+.restaurants-container .card__content__subtitle {
+  font-weight: 300;
+  margin-block: 0.2rem;
+}
+.restaurants-container .card__like {
+  position: absolute;
+  right: 1rem;
+  bottom: 1.8rem;
 }/*# sourceMappingURL=style.css.map */

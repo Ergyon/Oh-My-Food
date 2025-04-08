@@ -10,9 +10,12 @@ $new_notif-color: rgba(153, 226, 208, 1);
 $footer-color: rgba(53, 53, 53, 1);
 // Variables textes
 $title-size: 1.65rem;
-$subtitle: 1.2rem;
+$subtitle-size: 1.1rem;
 $subtitle-restaurant: 1.06rem;
 $btn-txt: 1rem;
+// Shadows
+$btn-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+$card-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 
 
 // Mixins
@@ -90,7 +93,7 @@ body {
         padding-inline: 1.3rem;
     }
     &__subtitle {
-        font-size: $subtitle;
+        font-size: $subtitle-size;
         color: $footer-color;
         font-weight: 300;
         text-align: center;
@@ -98,13 +101,14 @@ body {
         padding-bottom: 1rem;
     }
     .btn-main {
+        width: 13.5rem;
+        height: 3rem;
         background: $maincolor;
         color: white;
         font-size: $btn-txt;
         border: none;
         border-radius: 25px;
-        width: 13.5rem;
-        height: 3rem;
+        box-shadow: $btn-shadow;
     }
 }
    
@@ -119,22 +123,19 @@ body {
     .cta-menu {
         padding-inline: 2rem;
         &__btn {
-            border: 2px solid black;
+            border: none;
             background: $bg-sec-color;
-            width: 100%;
             height: 4.5rem;
             border-radius: 20px;
             margin-bottom: 1.3rem;
-            position: relative;
+            box-shadow: $btn-shadow;
             &__content {
-                @include flex-center-rows();
+                display: flex;
+                gap: 1rem;
             }
-            &__step-icon {
-                position: absolute; 
-                left: 0;
-            }
+
             &__icon {
-                margin-inline: 1rem;
+                margin-inline: .5rem;
             }
             &__txt {
                 color: black;
@@ -142,6 +143,59 @@ body {
                 font-weight: 500;
                 padding: 0.5rem;
             }
+        }
+    }
+}
+
+// Section restaurants
+.restaurants-container {
+    background: $bg-sec-color;
+    .restaurants {
+        margin-inline: 1rem;
+        padding-top: 2rem;
+        &__title {
+            font-size: $title-size;
+            margin-bottom: 1rem;
+        }
+    }
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    // Carte
+    .card {
+        background: $bg-prim-color;
+        border-radius: 15px;
+        box-shadow: $card-shadow;
+        overflow: hidden;
+        position: relative;
+        &__img-wrapper {
+            max-height: 12rem;
+            overflow: hidden;
+        }
+        &__img {
+            width: 100%;
+            object-fit: cover;          
+        }
+        &__content {
+            color: black;
+            padding-inline: 1rem;
+            padding-bottom: 1rem;  
+            position: relative;       
+            &__title { 
+                font-size: $subtitle-size;
+                margin-bottom: 0.3rem;
+            }
+            &__subtitle {
+                font-weight: 300;
+                margin-block: 0.2rem;
+            }
+        }
+        &__like {
+            position: absolute;
+            right: 1rem;
+            bottom: 1.8rem;
         }
     }
 }
