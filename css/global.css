@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+body a {
+  text-decoration: none;
+}
+
+.main-footer {
+  background: rgb(53, 53, 53);
+  padding: 1.6rem;
+}
+.main-footer__logo {
+  color: rgb(246, 246, 246);
+  width: 8.5rem;
+  height: auto;
+}
+.main-footer__nav {
+  height: 100%;
+  margin-top: 1rem;
+}
+.main-footer__nav__icon {
+  width: 1rem;
+}
+.main-footer__nav__content {
+  color: rgb(246, 246, 246);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.main-footer__nav__content__txt {
+  margin-block: 0.3rem;
+}/*# sourceMappingURL=global.css.map */

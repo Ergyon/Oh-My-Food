@@ -1,62 +1,19 @@
+@use 'variables-mixins' as *;
+@use 'global';
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-
-// Variables couleurs
-$maincolor: linear-gradient(rgba(255,121,218,1), rgba(147,86,220,1));
-$bg-prim-color: rgba(255,255,255,1);
-$bg-sec-color: rgba(246, 246, 246, 1);
-$location_banner-color: rgba(234, 234, 234, 1);
-$new_notif-color: rgba(153, 226, 208, 1);
-$footer-color: rgba(53, 53, 53, 1);
-// Variables textes
-$title-size: 1.65rem;
-$subtitle-size: 1.1rem;
-$subtitle-restaurant: 1.06rem;
-$btn-txt: 1rem;
-// Shadows
-$btn-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-$card-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
-
-
-// Mixins
-@mixin flex-center-rows {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@mixin flex-center-columns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-// Global
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    a {
-        text-decoration: none;
-    }
-}
 
 .title {
     font-size: $title-size;
 }
 
 // Head Logo
-.logo-container {
+.header-container {
     background: $bg-prim-color;
     @include flex-center-rows();
+    margin-block: 1rem;
     &__img {
-        width: 197px;
-        height: 36px;
-        margin-block: 1rem;
+        width: 12.3rem;
+        height: 2.25rem;
     }     
 }
 
@@ -67,7 +24,6 @@ body {
     color: $footer-color;    
     @include flex-center-rows();
     box-shadow: 0px 11px 11px 10px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px -5px -5px 5px rgba(0, 0, 0, 0.5);
     &__icon {
         font-size: 1rem;
         color: $footer-color;
@@ -82,8 +38,7 @@ body {
 // Headline
 .headline{
     background: $bg-sec-color;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding-inline: 2.5rem;
     padding-bottom: 3rem;
     @include flex-center-columns();
     &__title {
@@ -196,33 +151,6 @@ body {
             position: absolute;
             right: 1rem;
             bottom: 1.8rem;
-        }
-    }
-}
-
-// Footer
-.main-footer {
-    background: $footer-color;
-    padding: 1.6rem;
-    &__logo {
-        color:$bg-sec-color;
-        width: 8.5rem;
-        height: auto;
-    }
-    &__nav {
-        height: 100%;
-        margin-top: 1rem;
-        &__icon {
-            width: 1rem;
-        }
-    }
-    &__nav__content {
-        color: $bg-sec-color;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        &__txt {
-            margin-block: 0.3rem;
         }
     }
 }

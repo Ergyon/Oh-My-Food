@@ -1,0 +1,115 @@
+@use 'variables-mixins' as *;
+@use 'global';
+
+.header-container {
+    @include flex-center-rows();
+    margin-block: 1rem;
+    position: relative;
+    // padding-bottom: 6.25rem;
+    &__backbtn {
+        position: absolute;
+        left: 1rem;
+        cursor: pointer;
+    }
+    &__img {
+        width: 12.3rem;
+        height: 2.25rem;     
+    }
+}
+
+.img-wrapper {
+    z-index: -1;
+    // height: 17rem;
+    position: relative;
+    // top: -6.25rem;
+    &__img {
+        display: block;
+        width: 100%;
+        max-height: 383px;
+        object-fit: cover;
+    }
+}
+
+.main-container {
+    background: $bg-sec-color;
+    margin-top: -3rem;
+    border-radius: 55px 55px 0px 0px;
+    padding: 1rem; 
+    // @include flex-center-columns(); pour responsive desktop
+    z-index: 2;
+    position: relative; 
+    &__headline{
+        display: flex;
+        align-items: center;
+        position: relative;
+        &__title {
+            font-family: 'Shrikhand', sans-serif;
+            font-weight: 400;
+            font-size: $title-restaurant-size;
+        }
+        &__like {
+            position: absolute;
+            right: 1.5rem;
+            width: 1.6rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.menu {
+    width: 100%;
+    margin-bottom: 2rem;
+    // @include flex-center-columns(); pour responsive desktop
+    &__title {
+        font-weight: 300;
+        margin: 0;
+        display: flex;
+    }
+    &__title--underline {
+        width: 3rem;
+        height: 0.2rem;
+        background: $menu-underline-color;
+        margin-top: 0.3rem;
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        max-width: 639px;
+        height: auto;
+        padding-block: 1rem;
+    }
+    &__card {
+        background: $bg-prim-color;
+        border-radius: 20px;
+        box-shadow: $card-shadow;
+        height: 4.3rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &__content {
+            padding-inline: 1rem;
+            margin-block: 1rem;
+        }
+        &__title {
+            font-size: $subtitle-size;
+            font-weight: 500;
+            margin: 0;
+            padding: 0;
+        }
+        &__subtitle {
+            font-size: $btn-txt;
+            font-weight: 300;
+            margin: 0;
+            padding-top: 0.3rem;
+        }
+        &__price {
+            color: $footer-color;
+            position: absolute;
+            right: 2rem;
+            font-weight: 700;
+            width: 1.1rem;
+        }
+    }
+}
