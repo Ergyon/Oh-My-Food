@@ -1,2 +1,4 @@
 *.scss linguist-language=SCSS
 *.css linguist-language=CSS
+*.css linguist-generated=false
+*.scss linguist-generated=false
