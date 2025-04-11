@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/home-page.css">
+    <link rel="stylesheet" href="css/home-page.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>OhMyFood</title>
 </head>
@@ -22,7 +22,9 @@
         <h1 class="headline__title title">Réservez le menu qui vous convient</h1>
         <p class="headline__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
         <div>
-            <button class="btn-main">Explorer nos restaurants</button>
+            <a href="#restaurants">
+                <button class="btn-main">Explorer nos restaurants</button>
+            </a>
         </div>
     </div>
 
@@ -57,11 +59,11 @@
     </div>
     
     <!-- Les Restaurants -->
-    <div class="restaurants-container">
+    <div id="restaurants" class="restaurants-container">
         <section class="restaurants">
             <h2 class="restaurants__title">Restaurants</h2>
             <div class="cards-container">
-                <a href="pages_restaurants/la_palette_du_gout.html" target="_blank">
+                <a href="pages_restaurants/la_palette_du_gout.html">
                     <article class="card">
                         <div class="card__img-wrapper">
                             <img class="card__img" src="images/restaurants/la-palette-du-gout.jpg" alt="Un plat du restaurant">
@@ -76,7 +78,7 @@
                         
                     </article>
                 </a>
-                <a href="#">
+                <a href="/pages_restaurants/la_note_enchantee.html">
                     <article class="card">
                         <div class="card__img-wrapper">
                             <img class="card__img" src="images/restaurants/la-note-enchantee.jpg" alt="Un plat du restaurant">
@@ -91,7 +93,7 @@
                         
                     </article>
                 </a>
-                <a href="#">
+                <a href="/pages_restaurants/a_la_française.html">
                     <article class="card">
                         <div class="card__img-wrapper">
                             <img class="card__img" src="images/restaurants/a-la-française.jpg" alt="Un plat du restaurant">
@@ -106,7 +108,7 @@
                         
                     </article>
                 </a>
-                <a href="#">
+                <a href="/pages_restaurants/le_delice_des_sens.html">
                     <article class="card">
                         <div class="card__img-wrapper">
                             <img class="card__img" src="images/restaurants/le-delice-des-sens.jpg" alt="Un plat du restaurant">

@@ -58,6 +58,7 @@ body a {
 
 .img-wrapper {
   z-index: -1;
+  height: 19rem;
   position: relative;
 }
 .img-wrapper__img {
@@ -79,7 +80,6 @@ body a {
 .main-container__headline {
   display: flex;
   align-items: center;
-  position: relative;
 }
 .main-container__headline__title {
   font-family: "Shrikhand", sans-serif;
@@ -88,7 +88,7 @@ body a {
 }
 .main-container__headline__like {
   position: absolute;
-  right: 1.5rem;
+  right: 3rem;
   width: 1.6rem;
   cursor: pointer;
 }
@@ -148,4 +148,19 @@ body a {
   right: 2rem;
   font-weight: 700;
   width: 1.1rem;
+}
+
+.btn-wrapper {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.btn-wrapper .btn {
+  height: 3.5rem;
+  background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  width: 12.5rem;
 }/*# sourceMappingURL=restaurant-page.css.map */

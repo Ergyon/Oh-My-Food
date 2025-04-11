@@ -1,4 +1,4 @@
-// Variables couleurs
+// Couleurs
 $maincolor: linear-gradient(rgba(255,121,218,1), rgba(147,86,220,1));
 $bg-prim-color: rgba(255,255,255,1);
 $bg-sec-color: rgba(246, 246, 246, 1);
@@ -6,7 +6,7 @@ $location_banner-color: rgba(234, 234, 234, 1);
 $new_notif-color: rgba(153, 226, 208, 1);
 $footer-color: rgba(53, 53, 53, 1);
 $menu-underline-color: rgba(153, 226, 208, 1);
-// Variables textes
+// Textes
 $title-size: 1.7rem;
 $title-restaurant-size: 1.9rem;
 $subtitle-size: 1.1rem;
@@ -27,4 +27,13 @@ $card-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+@mixin btn {
+    height: 3.5rem;
+    background: $maincolor;
+    color: white;
+    font-size: $btn-txt;
+    border: none;
+    border-radius: 30px;
+    box-shadow: $btn-shadow;
 }

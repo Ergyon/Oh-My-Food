@@ -1,11 +1,11 @@
 @use 'variables-mixins' as *;
 @use 'global';
 
+// Header
 .header-container {
-    @include flex-center-rows();
+    @include flex-center-rows;
     margin-block: 1rem;
     position: relative;
-    // padding-bottom: 6.25rem;
     &__backbtn {
         position: absolute;
         left: 1rem;
@@ -19,9 +19,8 @@
 
 .img-wrapper {
     z-index: -1;
-    // height: 17rem;
+    height: 19rem;
     position: relative;
-    // top: -6.25rem;
     &__img {
         display: block;
         width: 100%;
@@ -30,18 +29,18 @@
     }
 }
 
+// Main content
 .main-container {
     background: $bg-sec-color;
     margin-top: -3rem;
     border-radius: 55px 55px 0px 0px;
     padding: 1rem; 
-    // @include flex-center-columns(); pour responsive desktop
+    // @include flex-center-columns; pour responsive desktop
     z-index: 2;
     position: relative; 
     &__headline{
         display: flex;
         align-items: center;
-        position: relative;
         &__title {
             font-family: 'Shrikhand', sans-serif;
             font-weight: 400;
@@ -49,13 +48,14 @@
         }
         &__like {
             position: absolute;
-            right: 1.5rem;
+            right: 3rem;
             width: 1.6rem;
             cursor: pointer;
         }
     }
 }
 
+// Menu section & cards
 .menu {
     width: 100%;
     margin-bottom: 2rem;
@@ -113,3 +113,13 @@
         }
     }
 }
+
+.btn-wrapper {
+    text-align: center;
+    margin-bottom: 2rem;
+    .btn {
+        @include btn;
+        width: 12.5rem;
+    }
+}
+    

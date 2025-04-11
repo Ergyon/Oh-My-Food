@@ -9,7 +9,7 @@
 // Head Logo
 .header-container {
     background: $bg-prim-color;
-    @include flex-center-rows();
+    @include flex-center-rows;
     margin-block: 1rem;
     &__img {
         width: 12.3rem;
@@ -22,7 +22,7 @@
     background: $location_banner-color;
     font-size: $btn-txt - 0.1;
     color: $footer-color;    
-    @include flex-center-rows();
+    @include flex-center-rows;
     box-shadow: 0px 11px 11px 10px rgba(0, 0, 0, 0.5);
     &__icon {
         font-size: 1rem;
@@ -39,8 +39,8 @@
 .headline{
     background: $bg-sec-color;
     padding-inline: 2.5rem;
-    padding-bottom: 3rem;
-    @include flex-center-columns();
+    padding-bottom: 3.5rem;
+    @include flex-center-columns;
     &__title {
         text-align: center;
         margin-bottom: 0.3rem;
@@ -56,14 +56,8 @@
         padding-bottom: 1rem;
     }
     .btn-main {
-        width: 13.5rem;
-        height: 3rem;
-        background: $maincolor;
-        color: white;
-        font-size: $btn-txt;
-        border: none;
-        border-radius: 25px;
-        box-shadow: $btn-shadow;
+        @include btn;
+        width: 14rem;
     }
 }
    
@@ -131,13 +125,13 @@
             overflow: hidden;
         }
         &__img {
-            width: 100%;   
+            width: 100%; 
+            object-fit: cover;  
         }
         &__content {
             color: black;
             padding-inline: 1rem;
-            padding-bottom: 1rem;  
-            position: relative;       
+            padding-bottom: 1rem;      
             &__title { 
                 font-size: $subtitle-size;
                 margin-bottom: 0.3rem;
