@@ -1,5 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap");
+@keyframes fallingTop {
+  0% {
+    transform: translateY(-70%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  40% {
+    transform: translateY(-30%);
+    opacity: 0.3;
+  }
+  60% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  80% {
+    transform: translateY(-10%);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 @keyframes slideInRight {
   from {
     transform: translateX(20%);
@@ -10,6 +36,116 @@
     opacity: 1;
   }
 }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.menu__wrapper > .menu__label:nth-child(1) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0s;
+}
+
+.menu__wrapper > .menu__label:nth-child(2) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.menu__wrapper > .menu__label:nth-child(3) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.menu__wrapper > .menu__label:nth-child(4) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+.menu__wrapper > .menu__label:nth-child(5) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+.menu__wrapper > .menu__label:nth-child(6) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.menu__wrapper > .menu__label:nth-child(7) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+.menu__wrapper > .menu__label:nth-child(8) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1.4s;
+}
+
+.menu__wrapper > .menu__label:nth-child(9) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1.6s;
+}
+
+.menu__wrapper > .menu__label:nth-child(10) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1.8s;
+}
+
+.cards-container > .card:nth-child(1) {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0s;
+}
+
+.cards-container > .card:nth-child(2) {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.cards-container > .card:nth-child(3) {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.cards-container > .card:nth-child(4) {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+.cards-container > .card:nth-child(5) {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+.cards-container > .card:nth-child(6) {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.cards-container > .card:nth-child(7) {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+.cards-container > .card:nth-child(8) {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1.4s;
+}
+
+.cards-container > .card:nth-child(9) {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1.6s;
+}
+
+.cards-container > .card:nth-child(10) {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1.8s;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -146,6 +282,7 @@ body a {
   display: flex;
   align-items: center;
   position: relative;
+  opacity: 0;
 }
 .menu__card:hover {
   cursor: pointer;

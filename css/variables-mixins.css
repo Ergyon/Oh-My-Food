@@ -33,4 +33,63 @@
     transform: translateX(0);
     opacity: 1;
   }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.menu__wrapper > .menu__label:nth-child(1) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0s;
+}
+
+.menu__wrapper > .menu__label:nth-child(2) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.menu__wrapper > .menu__label:nth-child(3) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.menu__wrapper > .menu__label:nth-child(4) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+.menu__wrapper > .menu__label:nth-child(5) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 0.8s;
+}
+
+.menu__wrapper > .menu__label:nth-child(6) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1s;
+}
+
+.menu__wrapper > .menu__label:nth-child(7) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1.2s;
+}
+
+.menu__wrapper > .menu__label:nth-child(8) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1.4s;
+}
+
+.menu__wrapper > .menu__label:nth-child(9) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1.6s;
+}
+
+.menu__wrapper > .menu__label:nth-child(10) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards;
+  animation-delay: 1.8s;
 }/*# sourceMappingURL=variables-mixins.css.map */

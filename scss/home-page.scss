@@ -127,6 +127,8 @@
         box-shadow: $card-shadow;
         overflow: hidden;
         position: relative;
+        opacity: 0;
+        animation: fadeInUp 1s ease-in-out forwards;
         &__img-wrapper {
             max-height: 12rem;
             overflow: hidden;
@@ -146,7 +148,8 @@
             z-index: 1;
             border-radius: 2px;
             padding: 0.4rem 0.7rem;
-            animation: fallingTop 1s cubic-bezier(.92,.09,.53,.66) forwards;
+            opacity: 0;
+            animation: fallingTop 0.7s cubic-bezier(.92,.09,.53,.66) forwards 0.7s;
         }
         &__content {
             color: black;
