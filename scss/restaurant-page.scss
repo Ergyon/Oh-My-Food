@@ -38,6 +38,7 @@
     // @include flex-center-columns; pour responsive desktop
     z-index: 2;
     position: relative; 
+
     &__headline{
         display: flex;
         align-items: center;
@@ -51,6 +52,16 @@
             right: 3rem;
             width: 1.6rem;
             cursor: pointer;
+            &__icon {
+                width: 1.5rem;
+                height: 1.5rem;
+                @include like-click;
+            }
+            &__input:checked + & {
+                .main-container__headline__like__icon {
+                    fill: $like-fill;
+                }
+            }
         }
     }
 }
@@ -88,6 +99,9 @@
         display: flex;
         align-items: center;
         position: relative;
+        &:hover{
+            cursor: pointer;
+        }
         &__content {
             padding-inline: 1rem;
             margin-block: 1rem;
@@ -112,6 +126,16 @@
             width: 1.1rem;
         }
     }
+    &__label {
+        position: relative;
+        display: block;
+    
+        input[type="checkbox"]:checked + .menu__card::after {
+            content: '';
+            @include menu-checkbox;
+        }
+    }
+    
 }
 
 .btn-wrapper {
@@ -120,6 +144,13 @@
     .btn {
         @include btn;
         width: 12.5rem;
+        transition: 200ms;
+        &:hover {
+            cursor: pointer;
+            width: 12.7rem;
+            opacity: 0.8;
+            font-size: $btn-txt + 0.04;
+        }
     }
 }
     
