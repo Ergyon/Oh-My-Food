@@ -35,7 +35,6 @@
     margin-top: -3rem;
     border-radius: 55px 55px 0px 0px;
     padding: 1rem; 
-    // @include flex-center-columns; pour responsive desktop
     z-index: 2;
     position: relative; 
 
@@ -56,6 +55,10 @@
                 width: 1.5rem;
                 height: 1.5rem;
                 @include like-click;
+                transition: 0.3s ease-out;
+                &:hover {
+                    transform: scale(95%);
+                }
             }
             &__input:checked + & {
                 .main-container__headline__like__icon {
@@ -70,7 +73,6 @@
 .menu {
     width: 100%;
     margin-bottom: 2rem;
-    // @include flex-center-columns(); pour responsive desktop
     &__title {
         font-weight: 300;
         margin: 0;
@@ -100,8 +102,10 @@
         align-items: center;
         position: relative;
         opacity: 0;
+        transition: 0.2s ease-in-out;
         &:hover{
             cursor: pointer;
+            box-shadow: rgba(50, 50, 93, 0.1) 0px 2px 5px -1px, rgba(236, 230, 230, 0.527) 0px 1px 3px -1px;
         }
         &__content {
             padding-inline: 1rem;
@@ -130,13 +134,16 @@
     &__label {
         position: relative;
         display: block;
-    
+        transition: 0.2s ease-in-out;
+        &:hover {
+            transform: scale(98%);
+        }
+
         input[type="checkbox"]:checked + .menu__card::after {
             content: '';
             @include menu-checkbox;
         }
-    }
-    
+    }    
 }
 
 .btn-wrapper {
@@ -154,4 +161,80 @@
         }
     }
 }
-    
+
+// Responsive tablette
+@media (min-width: 500px) {
+    .main-container {
+        @include flex-center-columns;
+        margin-inline: 10%;
+        margin-block : 0;
+        &__headline {
+            &__like {
+                right: 2rem;
+            }
+        }
+    }
+
+    .menu {
+        @include flex-center-columns;
+    }
+
+    .main-footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        padding: 1rem;
+        height: 90px;
+        &__logo {
+            width: 6rem;
+            margin-inline: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+        &__nav {
+            display: flex;
+            align-items: flex-end;
+            gap: 1.5rem; 
+            padding-right: 2rem;          
+        }
+        &__nav__content {   
+            gap: 0.3rem;
+            font-size: 0.8rem;
+            font-weight: 400;
+        }
+    }
+}
+
+// Responsive PC
+@media (min-width: 1024px) {
+    .main-container {
+        &__headline {
+            &__like {
+                right: 14rem;
+            }
+        }
+    }
+
+    .main-footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 1rem;
+        height: 90px;
+        &__logo {
+            width: 6.5rem;
+            margin-inline: 1rem;
+        }
+        &__nav {
+            display: flex;
+            align-items: flex-end;
+            gap: 2rem; 
+            padding-left: 40%;         
+        }
+        &__nav__content {   
+            gap: 0.3rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+    }
+}

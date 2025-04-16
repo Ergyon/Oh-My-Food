@@ -82,16 +82,23 @@
             border: none;
             background: $bg-sec-color;
             height: 4.5rem;
+            width: 21rem;
             border-radius: 20px;
             margin-bottom: 1.3rem;
             box-shadow: $btn-shadow;
+            display: flex;
+            align-items: center;
+            transition: 0.2s ease-in-out;
+            &:hover {
+                @include menu-btn-hover;
+            }
             &__content {
                 display: flex;
                 gap: 1rem;
             }
 
             &__icon {
-                margin-inline: .5rem;
+                margin-inline: 0.5rem;
             }
             &__txt {
                 color: black;
@@ -129,12 +136,16 @@
         position: relative;
         opacity: 0;
         animation: fadeInUp 1s ease-in-out forwards;
-        &__img-wrapper {
+        &:hover {
+            box-shadow: $btn-shadow;
+        }
+        &__img-wrapper {   
             max-height: 12rem;
             overflow: hidden;
             position: relative;
         }
         &__img {
+            height: 230px;
             width: 100%; 
             object-fit: cover; 
         }
@@ -149,7 +160,7 @@
             border-radius: 2px;
             padding: 0.4rem 0.7rem;
             opacity: 0;
-            animation: fallingTop 0.7s cubic-bezier(.92,.09,.53,.66) forwards 0.7s;
+            animation: fallingTop 0.7s cubic-bezier(.92,.09,.53,.66) forwards 1s;
         }
         &__content {
             color: black;
@@ -178,4 +189,99 @@
             fill: $like-fill;
         }
     }
+}
+
+// Responsive tablette
+@media (min-width: 500px){
+    .cta-container {
+        padding-inline: 2rem;
+        .cta-menu {
+            &__btn {
+                width: 100%; 
+                &__content {
+                    width: 100%;
+                }             
+            }
+        }
+    }
+
+    .restaurants-container {
+       padding-inline: 1rem;
+       .restaurants {
+            &__title {
+                margin-bottom: 1.5rem;
+                padding-left: 1rem;
+            }
+       }
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, auto);
+            justify-content: center;
+            gap: 1rem;
+            
+        }
+    }
+
+    .main-footer {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        padding: 1rem;
+        height: 90px;
+        &__logo {
+            width: 6rem;
+            margin-inline: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+        &__nav {
+            display: flex;
+            align-items: flex-end;
+            gap: 1.5rem; 
+            padding-right: 2rem;          
+        }
+        &__nav__content {   
+            gap: 0.3rem;
+            font-size: 0.8rem;
+            font-weight: 400;
+        }
+    }
+}
+
+// Responsive PC 
+@media (min-width: 1024px) {
+    .cta-container {
+        padding-inline: 10%;
+        &__title {
+            padding-left: 2.5rem;
+        }
+        .cta-menu {
+            display: flex;
+            gap: 2rem;
+            &__btn {
+                width: 100%; 
+                height: 4rem;
+                &__content {
+                    width: 100%;
+                }             
+            }
+        }
+    }
+
+    .restaurants-container {
+        padding-inline: 10%;
+        .restaurants {
+             &__title {
+                 margin-bottom: 1.5rem;
+                 padding-left: 1rem;
+             }
+        }
+         .cards-container {
+             display: grid;
+             grid-template-columns: repeat(2, 1fr);
+             grid-template-rows: repeat(2, auto);
+             justify-content: center;
+             gap: 4rem;  
+         }
+     }
 }

@@ -225,9 +225,17 @@ body a {
   border: none;
   background: rgb(246, 246, 246);
   height: 4.5rem;
+  width: 21rem;
   border-radius: 20px;
   margin-bottom: 1.3rem;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+}
+.cta-container .cta-menu__btn:hover {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  transform: scale(98%);
 }
 .cta-container .cta-menu__btn__content {
   display: flex;
@@ -269,12 +277,16 @@ body a {
   opacity: 0;
   animation: fadeInUp 1s ease-in-out forwards;
 }
+.restaurants-container .card:hover {
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
 .restaurants-container .card__img-wrapper {
   max-height: 12rem;
   overflow: hidden;
   position: relative;
 }
 .restaurants-container .card__img {
+  height: 230px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -290,7 +302,7 @@ body a {
   border-radius: 2px;
   padding: 0.4rem 0.7rem;
   opacity: 0;
-  animation: fallingTop 0.7s cubic-bezier(0.92, 0.09, 0.53, 0.66) forwards 0.7s;
+  animation: fallingTop 0.7s cubic-bezier(0.92, 0.09, 0.53, 0.66) forwards 1s;
 }
 .restaurants-container .card__content {
   color: black;
@@ -315,9 +327,91 @@ body a {
   height: 1.4rem;
   cursor: pointer;
   fill: transparent;
-  stroke: rgb(182, 98, 112);
-  transition: fill 0.2s ease-out;
+  stroke: rgb(147, 86, 220);
+  transition: fill 0.1s ease-out;
 }
 .restaurants-container .card__like__input:checked + .card__like .card__like__icon {
-  fill: rgba(236, 71, 71, 0.753);
+  fill: rgb(147, 86, 220);
+}
+
+@media (min-width: 500px) {
+  .cta-container {
+    padding-inline: 2rem;
+  }
+  .cta-container .cta-menu__btn {
+    width: 100%;
+  }
+  .cta-container .cta-menu__btn__content {
+    width: 100%;
+  }
+  .restaurants-container {
+    padding-inline: 1rem;
+  }
+  .restaurants-container .restaurants__title {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+  }
+  .restaurants-container .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+    gap: 1rem;
+  }
+  .main-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 1rem;
+    height: 90px;
+  }
+  .main-footer__logo {
+    width: 6rem;
+    margin-inline: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  .main-footer__nav {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+    padding-right: 2rem;
+  }
+  .main-footer__nav__content {
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1024px) {
+  .cta-container {
+    padding-inline: 10%;
+  }
+  .cta-container__title {
+    padding-left: 2.5rem;
+  }
+  .cta-container .cta-menu {
+    display: flex;
+    gap: 2rem;
+  }
+  .cta-container .cta-menu__btn {
+    width: 100%;
+    height: 4rem;
+  }
+  .cta-container .cta-menu__btn__content {
+    width: 100%;
+  }
+  .restaurants-container {
+    padding-inline: 10%;
+  }
+  .restaurants-container .restaurants__title {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+  }
+  .restaurants-container .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    justify-content: center;
+    gap: 4rem;
+  }
 }/*# sourceMappingURL=home-page.css.map */

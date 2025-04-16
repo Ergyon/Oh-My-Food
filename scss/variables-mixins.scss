@@ -7,8 +7,8 @@ $footer-color: rgba(53, 53, 53, 1);
 $menu-underline-color: rgba(153, 226, 208, 1);
 $badge-color : rgba(153, 226, 208, 1);
 $badge-txt: rgba(0, 135, 102, 1);
-$like-border: rgb(182, 98, 112);
-$like-fill: rgba(236, 71, 71, 0.753);
+$like-border: rgba(147, 86, 220, 1);
+$like-fill: rgba(147, 86, 220, 1);
 $menu-checked-color: rgba(153, 226, 208, 1);
 // Textes
 $title-size: 1.7rem;
@@ -68,19 +68,13 @@ $card-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
       transform: translateY(0);
     }
   }
-//   *** carousel menu restaurants ***
+//   *** carousel section plats delay ***
         @for $i from 1 through 10 {
             .menu__wrapper > .menu__label:nth-child(#{$i}) .menu__card {
             animation: fadeInUp 0.5s ease-out forwards;
             animation-delay: #{($i - 1) * 0.2}s;
             }
         }
-        //   *** carousel restaurants home page ***
-        // @for $i from 1 through 10 {
-        //     .card:nth-child(#{$i}) {
-        //     animation-delay: #{($i - 1) * 0.4}s;
-        //     }
-        // }  
 
   
 
@@ -105,11 +99,16 @@ $card-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
     box-shadow: $btn-shadow;
 }
 
+@mixin menu-btn-hover {
+    box-shadow: $card-shadow;
+    transform: scale(98%);
+}
+
 @mixin like-click {
     cursor: pointer;
     fill: transparent;
     stroke: $like-border;
-    transition: fill 0.2s ease-out;
+    transition: fill 0.1s ease-out;
 }
 
 @mixin menu-checkbox {

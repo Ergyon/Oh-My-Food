@@ -96,56 +96,6 @@
   animation-delay: 1.8s;
 }
 
-.cards-container > .card:nth-child(1) {
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 0s;
-}
-
-.cards-container > .card:nth-child(2) {
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 0.2s;
-}
-
-.cards-container > .card:nth-child(3) {
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 0.4s;
-}
-
-.cards-container > .card:nth-child(4) {
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 0.6s;
-}
-
-.cards-container > .card:nth-child(5) {
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 0.8s;
-}
-
-.cards-container > .card:nth-child(6) {
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 1s;
-}
-
-.cards-container > .card:nth-child(7) {
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 1.2s;
-}
-
-.cards-container > .card:nth-child(8) {
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 1.4s;
-}
-
-.cards-container > .card:nth-child(9) {
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 1.6s;
-}
-
-.cards-container > .card:nth-child(10) {
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 1.8s;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -243,11 +193,15 @@ body a {
   height: 1.5rem;
   cursor: pointer;
   fill: transparent;
-  stroke: rgb(182, 98, 112);
-  transition: fill 0.2s ease-out;
+  stroke: rgb(147, 86, 220);
+  transition: fill 0.1s ease-out;
+  transition: 0.3s ease-out;
+}
+.main-container__headline__like__icon:hover {
+  transform: scale(95%);
 }
 .main-container__headline__like__input:checked + .main-container__headline__like .main-container__headline__like__icon {
-  fill: rgba(236, 71, 71, 0.753);
+  fill: rgb(147, 86, 220);
 }
 
 .menu {
@@ -283,9 +237,11 @@ body a {
   align-items: center;
   position: relative;
   opacity: 0;
+  transition: 0.2s ease-in-out;
 }
 .menu__card:hover {
   cursor: pointer;
+  box-shadow: rgba(50, 50, 93, 0.1) 0px 2px 5px -1px, rgba(236, 230, 230, 0.527) 0px 1px 3px -1px;
 }
 .menu__card__content {
   padding-inline: 1rem;
@@ -313,6 +269,10 @@ body a {
 .menu__label {
   position: relative;
   display: block;
+  transition: 0.2s ease-in-out;
+}
+.menu__label:hover {
+  transform: scale(98%);
 }
 .menu__label input[type=checkbox]:checked + .menu__card::after {
   content: "";
@@ -351,4 +311,73 @@ body a {
   width: 12.7rem;
   opacity: 0.8;
   font-size: 1.04rem;
+}
+
+@media (min-width: 500px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: 10%;
+    margin-block: 0;
+  }
+  .main-container__headline__like {
+    right: 2rem;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 1rem;
+    height: 90px;
+  }
+  .main-footer__logo {
+    width: 6rem;
+    margin-inline: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  .main-footer__nav {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+    padding-right: 2rem;
+  }
+  .main-footer__nav__content {
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1024px) {
+  .main-container__headline__like {
+    right: 14rem;
+  }
+  .main-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 90px;
+  }
+  .main-footer__logo {
+    width: 6.5rem;
+    margin-inline: 1rem;
+  }
+  .main-footer__nav {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+    padding-left: 40%;
+  }
+  .main-footer__nav__content {
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
 }/*# sourceMappingURL=restaurant-page.css.map */
