@@ -1,5 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap");
+@keyframes showBody {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disappear {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 @keyframes fallingTop {
   0% {
     transform: translateY(-70%);
@@ -47,57 +78,83 @@
   }
 }
 .menu__wrapper > .menu__label:nth-child(1) .menu__card {
-  animation: fadeInUp 0.5s ease-out forwards;
+  animation: fadeInUp 0.5s ease-out forwards 2s;
   animation-delay: 0s;
 }
 
 .menu__wrapper > .menu__label:nth-child(2) .menu__card {
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 0.2s;
+  animation: fadeInUp 0.5s ease-out forwards 2s;
+  animation-delay: 0.3s;
 }
 
 .menu__wrapper > .menu__label:nth-child(3) .menu__card {
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 0.4s;
-}
-
-.menu__wrapper > .menu__label:nth-child(4) .menu__card {
-  animation: fadeInUp 0.5s ease-out forwards;
+  animation: fadeInUp 0.5s ease-out forwards 2s;
   animation-delay: 0.6s;
 }
 
+.menu__wrapper > .menu__label:nth-child(4) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards 2s;
+  animation-delay: 0.9s;
+}
+
 .menu__wrapper > .menu__label:nth-child(5) .menu__card {
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 0.8s;
-}
-
-.menu__wrapper > .menu__label:nth-child(6) .menu__card {
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 1s;
-}
-
-.menu__wrapper > .menu__label:nth-child(7) .menu__card {
-  animation: fadeInUp 0.5s ease-out forwards;
+  animation: fadeInUp 0.5s ease-out forwards 2s;
   animation-delay: 1.2s;
 }
 
+.menu__wrapper > .menu__label:nth-child(6) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards 2s;
+  animation-delay: 1.5s;
+}
+
+.menu__wrapper > .menu__label:nth-child(7) .menu__card {
+  animation: fadeInUp 0.5s ease-out forwards 2s;
+  animation-delay: 1.8s;
+}
+
 .menu__wrapper > .menu__label:nth-child(8) .menu__card {
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 1.4s;
+  animation: fadeInUp 0.5s ease-out forwards 2s;
+  animation-delay: 2.1s;
 }
 
 .menu__wrapper > .menu__label:nth-child(9) .menu__card {
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 1.6s;
+  animation: fadeInUp 0.5s ease-out forwards 2s;
+  animation-delay: 2.4s;
 }
 
 .menu__wrapper > .menu__label:nth-child(10) .menu__card {
-  animation: fadeInUp 0.5s ease-out forwards;
-  animation-delay: 1.8s;
+  animation: fadeInUp 0.5s ease-out forwards 2s;
+  animation-delay: 2.7s;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.loader-container {
+  position: fixed;
+  inset: 0;
+  background: rgb(246, 246, 246);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  animation: disappear 0.3s ease-in-out 2s forwards;
+}
+.loader-container .loader {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
+  opacity: 0.5;
+  border: 3px solid rgb(255, 255, 255);
+  border-top: 3px solid rgb(147, 86, 220);
+  border-radius: 100%;
+  animation: spin 2s linear infinite;
+}
+
+.main-global {
+  opacity: 0;
+  animation: showBody 0.3s ease-in-out 2s forwards;
 }
 
 body {
@@ -275,7 +332,7 @@ body a {
   overflow: hidden;
   position: relative;
   opacity: 0;
-  animation: fadeInUp 1s ease-in-out forwards;
+  animation: fadeInUp 1s ease-in-out 2.5s forwards;
 }
 .restaurants-container .card:hover {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
@@ -302,7 +359,7 @@ body a {
   border-radius: 2px;
   padding: 0.4rem 0.7rem;
   opacity: 0;
-  animation: fallingTop 0.7s cubic-bezier(0.92, 0.09, 0.53, 0.66) forwards 1s;
+  animation: fallingTop 0.7s cubic-bezier(0.92, 0.09, 0.53, 0.66) forwards 3.5s;
 }
 .restaurants-container .card__content {
   color: black;

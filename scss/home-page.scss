@@ -135,7 +135,7 @@
         overflow: hidden;
         position: relative;
         opacity: 0;
-        animation: fadeInUp 1s ease-in-out forwards;
+        animation: fadeInUp 1s ease-in-out 2.5s forwards;
         &:hover {
             box-shadow: $btn-shadow;
         }
@@ -160,7 +160,7 @@
             border-radius: 2px;
             padding: 0.4rem 0.7rem;
             opacity: 0;
-            animation: fallingTop 0.7s cubic-bezier(.92,.09,.53,.66) forwards 1s;
+            animation: fallingTop 0.7s cubic-bezier(.92,.09,.53,.66) forwards 3.5s;
         }
         &__content {
             color: black;
