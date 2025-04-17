@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <title>OhMyFood</title>
 </head>
+
 <body>
     <!-- Loader -->
     <div class="loader-container">
@@ -19,10 +20,11 @@
             <img class="header-container__img" src="images/logo/ohmyfood.png" alt="logo ohmyfood">
         </header>
         <!-- Localisation -->
-        <div class="location-banner">
+         <form method="get" action="rechercher" class="location-banner">
             <i class="fa-solid fa-location-dot location-banner__icon"></i>
-            <h2 class="location-banner__txt">Paris, Bellevile</h2>
-        </div>
+            <input class="location-banner__txt" type="text" placeholder="Paris, Belleville" required>
+        </form>
+
         <!-- Headline -->
         <div class="headline">        
             <h1 class="headline__title title">Réservez le menu qui vous convient</h1>
@@ -65,7 +67,7 @@
         </div>
         
         <!-- Les Restaurants -->
-        <div class="restaurants-container">
+        <div id="restaurants" class="restaurants-container">
             <section class="restaurants">
                 <h2 class="restaurants__title">Restaurants</h2>
                 <div class="cards-container">
@@ -165,7 +167,7 @@
                 <a class="main-footer__nav__content" href="#">
                     <p class="main-footer__nav__content__txt">Mentions légales</p>
                 </a>
-                <a class="main-footer__nav__content" href="#"> 
+                <a class="main-footer__nav__content" href="mailto:adresse@email.com"> 
                     <p class="main-footer__nav__content__txt">Contact</p>
                 </a>
             </nav>       

@@ -55,16 +55,6 @@
     opacity: 1;
   }
 }
-@keyframes slideInRight {
-  from {
-    transform: translateX(20%);
-    opacity: 0.3;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -123,4 +113,29 @@
 .menu__wrapper > .menu__label:nth-child(10) .menu__card {
   animation: fadeInUp 1s ease-out forwards 2s;
   animation-delay: 3.6s;
+}
+
+.menu__wrapper > .menu__label:nth-child(11) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 4s;
+}
+
+.menu__wrapper > .menu__label:nth-child(12) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 4.4s;
+}
+
+.menu__wrapper > .menu__label:nth-child(13) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 4.8s;
+}
+
+.menu__wrapper > .menu__label:nth-child(14) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 5.2s;
+}
+
+.menu__wrapper > .menu__label:nth-child(15) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 5.6s;
 }/*# sourceMappingURL=variables-mixins.css.map */

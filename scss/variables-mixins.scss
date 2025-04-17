@@ -20,95 +20,6 @@ $btn-txt: 1rem;
 $btn-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 $card-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 
-// Keyframes
-@keyframes showBody {
-    0% {
-        opacity: 0;
-    }
-    20% {
-        opacity: 0.2;
-    }
-    50% {
-        opacity: 0.4;
-    }
-    70% {
-        opacity: 0.6;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-@keyframes disappear {
-    to {
-        opacity: 0;
-        visibility: hidden;
-    }
-}
-
-@keyframes fallingTop {
-    0% {
-        transform: translateY(-70%);
-        opacity: 0;
-    }
-    10% {
-        transform: translateY(0);
-        opacity: 0.2;
-    }
-    40% {
-        transform: translateY(-30%);
-        opacity: 0.3;
-    }
-    60% {
-        transform: translateY(0);
-        opacity: 0.5;
-    }
-    80% {
-        transform: translateY(-10%);
-        opacity: 0.6;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-@keyframes slideInRight {
-    from {
-        transform: translateX(20%);
-        opacity: 0.3;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-// *** animations carousels ***
-@keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-//   *** carousel section plats delay ***
-        @for $i from 1 through 10 {
-            .menu__wrapper > .menu__label:nth-child(#{$i}) .menu__card {
-            animation: fadeInUp 1s ease-out forwards 2s;
-            animation-delay: #{($i - 1) * 0.4}s;
-            }
-        }
-
-  
 
 // Mixins
 @mixin flex-center-rows {
@@ -143,18 +54,82 @@ $card-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
     transition: fill 0.1s ease-out;
 }
 
-@mixin menu-checkbox {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 4rem;
-    height: 100%;
-    background-color: $menu-checked-color;
-    background-image: url(/icons/Check.svg);
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 0 20px 20px 0;
-    z-index: 2;
-    animation: slideInRight 0.3s ease-out forwards;
+// Keyframes
+// *** loader ***
+@keyframes showBody {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    70% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes disappear {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+// *** Badge new ***
+@keyframes fallingTop {
+    0% {
+        transform: translateY(-70%);
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(0);
+        opacity: 0.2;
+    }
+    40% {
+        transform: translateY(-30%);
+        opacity: 0.3;
+    }
+    60% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    80% {
+        transform: translateY(-10%);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+// *** Carousels ***
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+//   *** carousel section plats delay ***
+        @for $i from 1 through 15 {
+            .menu__wrapper > .menu__label:nth-child(#{$i}) .menu__card {
+            animation: fadeInUp 1s ease-out forwards 2s;
+            animation-delay: #{($i - 1) * 0.4}s;
+            }
+        }
